@@ -1,20 +1,18 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Blog personal de Rafael Minguet García"><meta name="author" content="Rafael Minguet García"><title>Rafael Minguet García - Sliding-menu</title><link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css"><link href="/assets/css/production.min.css" rel="stylesheet"></head><body>&nbsp;<nav class="navbar navbar-default rmg-navbar" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div><div class="collapse navbar-collapse rmg-nav-container" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav"><li><a href="/">Inicio</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/parallax.html">Prueba parallax</a></li></ul></div></div></nav><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><section><style type="text/css">body {
-            margin: 0;
-            padding: 0;
-        }
-
-        .menu-cool {
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Blog personal de Rafael Minguet García"><meta name="author" content="Rafael Minguet García"><title>Rafael Minguet García - Sliding-menu</title><link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css"><link href="/assets/css/production.min.css" rel="stylesheet"></head><body>&nbsp;<nav class="navbar navbar-default rmg-navbar" role="navigation"><div class="container"><div class="navbar-header"><button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"><span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span></button></div><div class="collapse navbar-collapse rmg-nav-container" id="bs-example-navbar-collapse-1"><ul class="nav navbar-nav"><li><a href="/">Inicio</a></li><li><a href="/blog.html">Blog</a></li><li><a href="/parallax.html">Prueba parallax</a></li></ul></div></div></nav><link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css"><section><style scoped type="text/css">.menu-cool {
             left: -85%;
             position: fixed;
             width: 85%;
         }
 
         .btn-toggle-menu {
+            color: black;
+            margin-right: -15px;
             position: absolute;
             right: 0;
-            width: 100%;
             text-align: right;
-            margin-right: -15px;
+            text-decoration: none;
+            top: 10px;
+            width: 100%;
         }
 
         .menu-cool-items {
@@ -26,9 +24,21 @@
             background-color: gray;
         }
 
-        .btn-toggle-menu:hover .menu-cool-items {
+        #sliding-menu:target .menu-cool-items {
             transform: translateX(100%);
-        }</style><h1>Pruébalo desde el móvil</h1><div class="menu-cool"><div class="fa fa-bars btn-toggle-menu"><div class="menu-cool-items"><div>Este sería el menú molón</div></div></div></div></section><footer><div class="container"><div class="row"><div class="col-lg-12 text-center"><p><span>Escrito y mantenido por Rafael Minguet García<br>Todo el contenido bajo la licencia <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GNU GPL v2</a> , 2015</span><div id="social"><span><a href="https://github.com/ramingar" target="_blank"><img src="/assets//img/github.png" alt="GitHub"></a> | <a href="https://es.linkedin.com/in/ramingar/es" target="_blank"><img src="/assets//img/linkedin.png" alt="LinkedIn"></a> | <a href="https://twitter.com/ramingar" target="_blank"><img src="/assets//img/twitter.png" alt="Tuitah"></a> | <a href="http://pastebin.com/u/Rafael_Minguet" target="_blank"><img src="/assets//img/pastebin.png" alt="Pastebin"></a></span></div></p></div></div></div></footer><script src="/assets/js/jquery.js"></script><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        }
+
+        #sliding-menu:target .btn-menu-open {
+            display: none;
+        }
+
+        .btn-menu-close {
+            display: none;
+        }
+
+        #sliding-menu:target .btn-menu-close {
+            display: block;
+        }</style><h1>Pruébalo desde el móvil</h1><div class="menu-cool"><div id="sliding-menu"><a class="fa fa-bars btn-toggle-menu btn-menu-open" href="#sliding-menu"></a> <a class="fa fa-close btn-toggle-menu btn-menu-close" href="#"></a><div class="menu-cool-items"><div>Este sería el menú molón</div></div></div></div></section><footer><div class="container"><div class="row"><div class="col-lg-12 text-center"><p><span>Escrito y mantenido por Rafael Minguet García<br>Todo el contenido bajo la licencia <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GNU GPL v2</a> , 2015</span><div id="social"><span><a href="https://github.com/ramingar" target="_blank"><img src="/assets//img/github.png" alt="GitHub"></a> | <a href="https://es.linkedin.com/in/ramingar/es" target="_blank"><img src="/assets//img/linkedin.png" alt="LinkedIn"></a> | <a href="https://twitter.com/ramingar" target="_blank"><img src="/assets//img/twitter.png" alt="Tuitah"></a> | <a href="http://pastebin.com/u/Rafael_Minguet" target="_blank"><img src="/assets//img/pastebin.png" alt="Pastebin"></a></span></div></p></div></div></div></footer><script src="/assets/js/jquery.js"></script><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]--><script src="/assets/js/bootstrap.js"></script><script src="/assets/js/production.min.js"></script><script src="/assets/js/parallax.min.js"></script><script type="application/javascript">$('document').ready(function () {
         var scene = document.getElementById('scene');
         if (scene) {
