@@ -1,5 +1,105 @@
-<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Blog personal de Rafael Minguet García"><meta name="author" content="Rafael Minguet García"><title>Rafael Minguet García - Blog</title><link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"><link href="http://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css"><link href="/assets/css/production.min.css" rel="stylesheet"></head><body>&nbsp;<nav class="navbar navbar-default" role="navigation"><div class="navbar-container"><div><ul class="rmg-navbar"><li><a href="/">Inicio</a></li><li><a href="/blog.html">Blog</a></li><li><a target="_blank" href="https://es.linkedin.com/in/ramingar">About me...</a></li></ul></div></div></nav><div class="container blog"><div class="row"><div class="text-center"><div class="displayed postExcerpt"><div class="post-image" style="background-image:url(/assets//img/phonegapConfigXML.jpg)"></div><h2 class="text-center">Depurar un proyecto PhoneGap para Android<br><small class="text-center">29 de diciembre de 2015</small></h2><div class="post-excerpt"><p class="text-left">En el post anterior se comentó cómo iniciar un proyecto nuevo con PhoneGap. PhoneGap te proporciona un API para atacar al hardware de un dispositivo móvil usando javascript. En este post hablaré de cómo depurar el proyecto. Tenemos dos posibilidades: depurar desde un AVD (Android Virtual Device), es decir, [...]</p><div class="text-center"><a href="/posts/depurar-proyecto-phonegap-para-android" class="btn btn-default btn-lg">Lee más</a></div></div><hr></div><div class="displayed postExcerpt"><div class="post-image" style="background-image:url(/assets//img/phonegap-logo.png)"></div><h2 class="text-center">Creando un proyecto con PhoneGap<br><small class="text-center">01 de diciembre de 2015</small></h2><div class="post-excerpt"><p class="text-left">Actualmente estoy trabajando casi en exclusiva en la parte front-end de un proyecto bastante ambicioso que consta, además, de una aplicación móvil. En la toma de decisiones, para desarrollar esa parte móvil, escogimos [PhoneGap](http://phonegap.com/) por encima del SDK de Android o de iOS debido a la mayor versatilidad que [...]</p><div class="text-center"><a href="/posts/crear-proyecto-phonegap" class="btn btn-default btn-lg">Lee más</a></div></div><hr></div><div class="displayed postExcerpt"><div class="post-image" style="background-image:url(/assets//img/book-presentation.jpg)"></div><h2 class="text-center">¡El primero!<br><small class="text-center">10 de noviembre de 2015</small></h2><div class="post-excerpt"><p class="text-left">YAAAAY! La verdad es que ahora que escribo el primer artículo de mi blog, ¡sienta súper bien! Inicié la creación de este blog como un reto personal: crear un blog desde cero que pudiese ser alojado en Github Pages y cuyos artículos se generasen a partir de markdowns... hete [...]</p><div class="text-center"><a href="/posts/presentacion" class="btn btn-default btn-lg">Lee más</a></div></div><hr></div><div class="text-center"><ul class="pager"><li id="previous" class="previous hidden"><a href="#" onclick="pagination.previous(5)">&larr; Nuevos</a></li><li id="next" class="next"><a href="#" onclick="pagination.next(5)">Viejos &rarr;</a></li></ul></div></div></div></div><footer><div class="container"><div class="row"><div class="text-center"><p><span>Escrito y mantenido por Rafael Minguet García<br>Todo el contenido bajo la licencia <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GNU GPL v2</a> , 2015</span><div id="social"><span><a href="https://github.com/ramingar" target="_blank"><img src="/assets//img/github.png" alt="GitHub"></a> | <a href="https://es.linkedin.com/in/ramingar/es" target="_blank"><img src="/assets//img/linkedin.png" alt="LinkedIn"></a> | <a href="https://twitter.com/ramingar" target="_blank"><img src="/assets//img/twitter.png" alt="Tuitah"></a> | <a href="http://pastebin.com/u/Rafael_Minguet" target="_blank"><img src="/assets//img/pastebin.png" alt="Pastebin"></a></span></div></p></div></div></div></footer><script src="/assets/js/jquery.js"></script><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]--><script src="/assets/js/bootstrap.js"></script><script src="/assets/js/production.min.js"></script><script type="text/javascript">//var postsJSON = JSON.parse([object Object],[object Object],[object Object]);
+<!DOCTYPE html><html lang="es"><head><meta charset="utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Blog personal de Rafael Minguet García"><meta name="author" content="Rafael Minguet García"><title>Rafael Minguet García - Blog</title><link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css"><link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css"><link href="/assets/css/production.min.css" rel="stylesheet"></head><body>&nbsp;<nav class="navbar navbar-default" role="navigation"><div class="navbar-container"><div><ul class="rmg-navbar"><li><a href="/">Inicio</a></li><li><a href="/blog.html">Blog</a></li><li><a target="_blank" href="https://es.linkedin.com/in/ramingar">About me...</a></li></ul></div></div></nav><div class="container blog"><div class="row"><div class="text-center"><div onclick="location.pathname='/posts/depurar-proyecto-phonegap-para-android'" class="post-card"><div class="displayed postExcerpt"><div class="post-image" style="background-image:url(/assets//img/phonegapConfigXML.jpg)"></div><h2 class="text-center">Depurar un proyecto PhoneGap para Android<br><small class="text-center">29 de diciembre de 2015</small></h2><div class="post-excerpt"><p class="text-left">En el post anterior se comentó cómo iniciar un proyecto nuevo con PhoneGap. PhoneGap te proporciona un API para atacar al hardware de un dispositivo móvil usando javascript. En este post hablaré de cómo depurar el proyecto. Tenemos dos posibilidades: depurar desde un AVD (Android Virtual Device), es decir, [...]</p><div class="text-center read-more"><a href="/posts/depurar-proyecto-phonegap-para-android" class="btn btn-default btn-lg">Lee más</a></div></div><hr></div></div><div onclick="location.pathname='/posts/crear-proyecto-phonegap'" class="post-card"><div class="displayed postExcerpt"><div class="post-image" style="background-image:url(/assets//img/phonegap-logo.png)"></div><h2 class="text-center">Creando un proyecto con PhoneGap<br><small class="text-center">01 de diciembre de 2015</small></h2><div class="post-excerpt"><p class="text-left">Actualmente estoy trabajando casi en exclusiva en la parte front-end de un proyecto bastante ambicioso que consta, además, de una aplicación móvil. En la toma de decisiones, para desarrollar esa parte móvil, escogimos [PhoneGap](http://phonegap.com/) por encima del SDK de Android o de iOS debido a la mayor versatilidad que [...]</p><div class="text-center read-more"><a href="/posts/crear-proyecto-phonegap" class="btn btn-default btn-lg">Lee más</a></div></div><hr></div></div><div onclick="location.pathname='/posts/presentacion'" class="post-card"><div class="displayed postExcerpt"><div class="post-image" style="background-image:url(/assets//img/book-presentation.jpg)"></div><h2 class="text-center">¡El primero!<br><small class="text-center">10 de noviembre de 2015</small></h2><div class="post-excerpt"><p class="text-left">YAAAAY! La verdad es que ahora que escribo el primer artículo de mi blog, ¡sienta súper bien! Inicié la creación de este blog como un reto personal: crear un blog desde cero que pudiese ser alojado en Github Pages y cuyos artículos se generasen a partir de markdowns... hete [...]</p><div class="text-center read-more"><a href="/posts/presentacion" class="btn btn-default btn-lg">Lee más</a></div></div><hr></div></div><div class="text-center"><ul class="pager"><li id="previous" class="previous hidden"><a href="#" onclick="pagination.previous(5)">&larr; Nuevos</a></li><li id="next" class="next"><a href="#" onclick="pagination.next(5)">Viejos &rarr;</a></li></ul></div></div></div></div><footer><div class="container"><div class="row"><div class="text-center"><p><span>Escrito y mantenido por Rafael Minguet García<br>Todo el contenido bajo la licencia <a href="http://www.gnu.org/licenses/gpl-2.0.html" target="_blank">GNU GPL v2</a> , 2015</span><div id="social"><span><a href="https://github.com/ramingar" target="_blank"><div class="social-link" style="background-image:url(/assets//img/github.png)"></div></a> <span class="social-separator">|</span> <a href="https://es.linkedin.com/in/ramingar/es" target="_blank"><div class="social-link" style="background-image:url(/assets//img/linkedin.png)"></div></a> <span class="social-separator">|</span> <a href="https://twitter.com/ramingar" target="_blank"><div class="social-link" style="background-image:url(/assets//img/twitter.png)"></div></a> <span class="social-separator">|</span> <a href="http://pastebin.com/u/Rafael_Minguet" target="_blank"><div class="social-link" style="background-image:url(/assets//img/pastebin.png)"></div></a></span></div></p></div></div></div></footer><script src="/assets/js/jquery.js"></script><!--[if lt IE 9]><script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script><![endif]--><script src="/assets/js/production.min.js"></script><script>/*jslint undef: true */
+
+    /**
+     * Enhancement for jQuery's on event.
+     * It attaches an event handler function for one or more events to the selected elements and
+     * calls the handler function if the event was not triggered for a given interval.
+     * @author: yckart
+     * @page:   https://github.com/yckart/jquery.unevent.js
+     */
+    (function ($) {
+        var on = $.fn.on, timer;
+        $.fn.on = function () {
+            var args = Array.apply(null, arguments);
+            var last = args[args.length - 1];
+
+            if (isNaN(last) || (last === 1 && args.pop())) {
+                return on.apply(this, args);
+            }
+
+            var delay = args.pop();
+            var fn = args.pop();
+
+            args.push(function () {
+                var self = this, params = arguments;
+                clearTimeout(timer);
+                timer = setTimeout(function () {
+                    fn.apply(self, params);
+                }, delay);
+            });
+
+            return on.apply(this, args);
+        };
+    }(this.jQuery || this.Zepto));</script><script>/*jslint undef: true */
+
+    var Effects = (function () {
+        'use strict';
+
+        var elementsHidden = [];
+
+        var toggleOnScroll = function (elementScrolled, elementHidden, position, reverse) {
+
+            elementsHidden.push(elementHidden);
+
+            var hideNav = function () {
+                for (var ii = 0; ii < elementsHidden.length; ii++) {
+                    elementsHidden[ii].addClass('hide-preserving');
+                }
+            };
+
+            var showNav = function () {
+                for (var ii = 0; ii < elementsHidden.length; ii++) {
+                    elementsHidden[ii].removeClass('hide-preserving');
+                }
+            };
+
+            $(document).on('scroll', function () {
+                var positionOnPage = elementScrolled[0].getBoundingClientRect().top;
+                if (reverse) {
+                    if (positionOnPage > position) {
+                        showNav();
+                    }
+                }
+                else {
+                    if (positionOnPage < position) {
+                        showNav();
+                    }
+                }
+            });
+
+            // End of scroll
+            $(document).on('scroll', function () {
+                var positionOnPage = elementScrolled[0].getBoundingClientRect().top;
+                if (reverse) {
+                    if (positionOnPage < position) {
+                        showNav();
+                    }
+                    else {
+                        hideNav();
+                    }
+                }
+                else {
+                    if (positionOnPage >= position) {
+                        showNav();
+                    }
+                    else {
+                        hideNav();
+                    }
+                }
+            }, 2000);
+        };
+
+        return {
+            toggleOnScroll: toggleOnScroll
+        };
+    })();</script><script>/*jslint undef: true */
+
+    (function () {
+        var blog = $('div.container.blog');
+        Effects.toggleOnScroll(blog, $('.navbar'), 0);
+        Effects.toggleOnScroll(blog, $('#social'), 0);
+    })();</script><script type="text/javascript">//var postsJSON = JSON.parse([object Object],[object Object],[object Object]);
   //var postsJSON = '[object Object],[object Object],[object Object]';
   //var textPostsJSON = $('<div/>').html('[{&quot;data&quot;:{&quot;titleOfThisPage&quot;:&quot;Depurar un proyecto PhoneGap para Android&quot;,&quot;posted&quot;:&quot;2015-12-29T00:00:00.000Z&quot;,&quot;headerImage&quot;:&quot;phonegapConfigXML.jpg&quot;},&quot;tags&quot;:[&quot;phonegap&quot;,&quot;debug&quot;],&quot;dest&quot;:&quot;depurar-proyecto-phonegap-para-android&quot;,&quot;content&quot;:&quot;En el post anterior se comentó cómo iniciar un proyecto nuevo con PhoneGap. PhoneGap te proporciona un API para atacar al hardware de un dispositivo móvil usando javascript. En este post hablaré de cómo depurar el proyecto. Tenemos dos posibilidades: depurar desde un AVD (Android Virtual Device), es decir,&quot;},{&quot;data&quot;:{&quot;titleOfThisPage&quot;:&quot;Creando un proyecto con PhoneGap&quot;,&quot;posted&quot;:&quot;2015-12-01T00:00:00.000Z&quot;,&quot;headerImage&quot;:&quot;phonegap-logo.png&quot;},&quot;tags&quot;:[&quot;phonegap&quot;],&quot;dest&quot;:&quot;crear-proyecto-phonegap&quot;,&quot;content&quot;:&quot;Actualmente estoy trabajando casi en exclusiva en la parte front-end de un proyecto bastante ambicioso que consta, además, de una aplicación móvil. En la toma de decisiones, para desarrollar esa parte móvil, escogimos [PhoneGap](http://phonegap.com/) por encima del SDK de Android o de iOS debido a la mayor versatilidad que&quot;},{&quot;data&quot;:{&quot;titleOfThisPage&quot;:&quot;¡El primero!&quot;,&quot;posted&quot;:&quot;2015-11-10T00:00:00.000Z&quot;,&quot;headerImage&quot;:&quot;book-presentation.jpg&quot;},&quot;tags&quot;:[&quot;introduction&quot;],&quot;dest&quot;:&quot;presentacion&quot;,&quot;content&quot;:&quot;YAAAAY! La verdad es que ahora que escribo el primer artículo de mi blog, ¡sienta súper bien! Inicié la creación de este blog como un reto personal: crear un blog desde cero que pudiese ser alojado en Github Pages y cuyos artículos se generasen a partir de markdowns... hete&quot;}]').text();
   //var postsJSON = JSON.parse(textPostsJSON);
